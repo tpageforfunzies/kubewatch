@@ -4,17 +4,20 @@ metadata:
   name: kubewatch
 data:
   .kubewatch.yaml: |
-    namespace: ""
+    namespace: "default"
     handler:
       slack:
-        token: <token>
-        channel: <channel>
+        token: mytoken
+        channel: #mychannel
     resource:
-      deployment: false
-      replicationcontroller: false
-      replicaset: false
-      daemonset: false
+      deployment: true
+      replicationcontroller: true
+      replicaset: true
+      daemonset: true
       services: true
       pod: true
-      secret: false
-      configmap: false
+      secret: true
+      configmap: true
+
+
+
