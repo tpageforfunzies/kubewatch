@@ -7,17 +7,12 @@ data:
     namespace: "default"
     handler:
       slack:
-        token: mytoken
-        channel: #mychannel
+        token: hohohoho
+        channel: heheheh
     resource:
       deployment: true
-      replicationcontroller: true
-      replicaset: true
-      daemonset: true
       services: true
       pod: true
-      secret: true
-      configmap: true
 
 
 
