@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubewatch
+  namespace: default
+  labels:
+    app: kubewatch
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubewatch
+  template:
+    metadata:
+      namespace: default
+      labels:
+        app: kubewatch
+    spec:
+      serviceAccountName: kubewatch
+      containers:
+      - image: tpageforfunzies/kubewatcharmhf:v1
+        imagePullPolicy: Always
+        name: kubewatch
+        volumeMounts:
+        - name: config-volume
+          mountPath: /root
+      restartPolicy: Always
+      volumes:
+      - name: config-volume
+        configMap:
+          name: kubewatch
