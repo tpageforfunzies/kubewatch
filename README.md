@@ -5,6 +5,17 @@
 **kubewatch** is a Kubernetes watcher that currently publishes notification to available collaboration hubs/notification channels. Run it in your k8s cluster, and you will get event notifications through webhooks.
 
 # Usage
+### tpage version:
+###### fill in createsecret if necessary
+###### build and push docker image if necessary
+###### all values in .env file
+###### needs all the below too
+```console
+$ kubectl apply -f kubewatch-configmap.yaml
+$ kubectl apply -f kubewatch-service-account.yaml
+$ kubectl apply -f kubewatch-deployment.yaml
+```
+
 ```
 $ kubewatch -h
 
@@ -75,16 +86,7 @@ $ helm upgrade --install kubewatch stable/kubewatch --values=values-file.yml
 
 #### Using kubectl:
 
-### tpage version:
-###### fill in createsecret if necessary
-###### build and push docker image if necessary
-###### all values in .env file
-###### needs all the below too
-```console
-$ kubectl apply -f kubewatch-configmap.yaml
-$ kubectl apply -f kubewatch-service-account.yaml
-$ kubectl apply -f kubewatch-deployment.yaml
-```
+
 
 In order to run kubewatch in a Kubernetes cluster quickly, the easiest way is for you to create a [ConfigMap](https://github.com/bitnami-labs/kubewatch/blob/master/kubewatch-configmap.yaml) to hold kubewatch configuration.
 
