@@ -8,8 +8,8 @@ data:
     namespace: "default"
     handler:
       slack:
-        token: hohohoho
-        channel: heheheh
+        token: tehehehe
+        channel: #teeeeehehehe
     resource:
       deployment: true
       services: true

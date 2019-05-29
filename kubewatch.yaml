@@ -6,7 +6,7 @@ metadata:
 spec:
   serviceAccountName: kubewatch
   containers:
-  - image: tpageforfunzies/kubewatcharmhf:v1
+  - image: tpageforfunzies/kubewatcharmhf:v2
     imagePullPolicy: Always
     name: kubewatch
     volumeMounts:

@@ -75,7 +75,11 @@ $ helm upgrade --install kubewatch stable/kubewatch --values=values-file.yml
 
 #### Using kubectl:
 
-##### tpage version:
+### tpage version:
+###### fill in createsecret if necessary
+###### build and push docker image if necessary
+###### all values in .env file
+###### needs all the below too
 ```console
 $ kubectl apply -f kubewatch-configmap.yaml
 $ kubectl apply -f kubewatch-service-account.yaml

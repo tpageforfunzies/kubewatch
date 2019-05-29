@@ -18,12 +18,14 @@ spec:
     spec:
       serviceAccountName: kubewatch
       containers:
-      - image: tpageforfunzies/kubewatcharmhf:v1
+      - image: tpageforfunzies/kubewatcharmhf:v2
         imagePullPolicy: Always
         name: kubewatch
         volumeMounts:
         - name: config-volume
           mountPath: /root
+      imagePullSecrets:
+        - name: myregistrykey
       restartPolicy: Always
       volumes:
       - name: config-volume

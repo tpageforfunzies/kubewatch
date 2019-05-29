@@ -14,7 +14,7 @@ FROM alpine
 RUN apk add --update ca-certificates
 
 COPY --from=builder /kubewatch /bin/kubewatch
-ENV SLACK_TOKEN='hohoho'
-ENV SLACK_CHANNEL='#hehehe'
+ENV SLACK_TOKEN='tehehe'
+ENV SLACK_CHANNEL='#tehehe'
 
 ENTRYPOINT ["/bin/kubewatch"]

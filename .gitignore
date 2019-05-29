@@ -1,3 +1,5 @@
 .idea
 kubewatch
 .env
+createsecret.sh
+.DS_Store
